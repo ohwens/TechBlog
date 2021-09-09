@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="card">
+    <article class="post card-body">
+
+      <div class="title card-header h3 mt-2 fw-normal">
+        Edit Post
+      </div>
+
+      <form class="edit-post-form">
+        <div>
+          <label class="form-label mt-3 mb-3" for="post-title">Title:</label>
+          <input name="post-title" type="text" value="{{post.title}}" />
+        </div>
+        <div>
+          <label class="form-label" for="post-text">Text:</label>
+          <textarea name="textbody" id="post-text" style="width: 18rem; height: 20rem"
+            type="text">{{post.textbody}}</textarea>
+        </div>
+        <div class = "container">
+          <button class="btn-primary btn mb-3" type="submit">Save post</button>
+          <button class="btn-primary btn mb-3 delete-post-btn" type="button">Delete post</button>
+        </div>
+      </form>
+    </article>
+
+    <div class= "container">
+    <div class="title card-title h5 mt-2 fw-normal">
+      Comments:
+    </div>
+
+
+
+    <form class="comment-form">
+      <div>
+        <textarea name="comment-body"></textarea>
+      </div>
+
+      <div>
+        <button class="btn-primary btn mb-3" type="submit">add comment</button>
+      </div>
+    </form>
+
+    <div>
+     
+    <p>{{post.comments.length}} {{format_plural "comment" post.comments.length}}:</p>
+    </div>
+     {{>comments post.comments}}
+
+  </div>
+</div>
+</div>
+<script src="/js/editPost.js"></script>
+<script src="/js/deletePost.js"></script>
+<script src="/js/comment.js"></script>

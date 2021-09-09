@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="card">
+    <article class="post card-body">
+      <div class="title card-header h3 mt-2 fw-normal">
+        {{title}}
+      </div>
+      <div class="meta">
+        by {{user.username}} on {{format_date createdAt}}
+      </div>
+      <div>
+        <p name="" id="" cols="30" rows="10"> {{post.textbody}}</p>
+
+      </div>
+    </article>
+  </div>
+
+  <div class="title card-title h5 mt-2 fw-normal">
+    Comments:
+  </div>
+
+  {{>comment comments}}
+
+  {{#if loggedIn}}
+  <form class="comment-form container mt-3">
+    <div>
+      <textarea name="comment-body" style = "width: 18rem"></textarea>
+    </div>
+
+    <div>
+      <button class="btn-primary btn mb-3" type="submit">add comment</button>
+    </div>
+  </form>
+  {{/if}}
+
+</div>
+
+{{#if loggedIn}}
+<script src="/js/comment.js"></script>
+{{/if}}
+

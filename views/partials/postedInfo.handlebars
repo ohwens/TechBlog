@@ -1,0 +1,13 @@
+<div class="card text-center" style="width: 18rem">
+    <article class="post card-body">
+        <div class="title card-header">
+            <h3 class="h3 mt-2 fw-normal">{{title}}</h3>
+            <a class="" href="/post/{{id}}">Show Post</a>
+        </div>
+        <div class="meta">
+            by {{user.username}} on {{format_date createdAt}}
+            |
+            <a href="/post/{{id}}">{{comments.length}} {{comments.length}}</a>
+        </div>
+    </article>
+</div>

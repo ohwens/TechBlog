@@ -1,0 +1,16 @@
+
+<div class="container">
+    <div class="col align-self-center">
+        <ul class="post-list list-group">
+            {{#each posts as |post|}}
+
+            <li class="list-group-item">
+
+                {{> postedInfo post}}
+
+            </li>
+
+            {{/each}}
+        </ul>
+    </div>
+</div>

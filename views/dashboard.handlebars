@@ -1,0 +1,38 @@
+<div class= "container mt-3">
+
+<section>
+    <h2>Create New Post</h2>
+
+    <form class = "new-post-form">
+        <div class = "mb-3">
+            <label class="form-label" for="post-title"><strong>Title</strong></label>
+            <input class="form-control" type="text" id="post-title" name="post-title" />
+        </div>
+        <div class = "mb-3">
+            <label class="form-label" for="textbody"><strong>Content</strong></label>
+            <textarea class = "form-control" rows = "5" id="textbody" name="textbody"></textarea> 
+                    </div>
+        <button class="btn-primary btn mb-3" type ="submit" class ="btn"><Strong>Submit</Strong></button>
+    </form>
+</section>
+</div>
+{{#if posts.length}}
+
+<div class = "container mt-3">
+<section>
+  <h2>Your Posts</h2>
+  <ulclass="post-list list-group">
+    {{#each posts as |post|}}
+   
+    <li class = "list-group-item">
+       <h3>{{post.title}}</h3>
+       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ul>
+</section>
+</div>
+{{/if}}
+
+
+<script src="/js/addPost.js"></script>
