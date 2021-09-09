@@ -1,0 +1,17 @@
+[
+    {
+      "title": "ReadMe Creator",
+      "textbody": "An app which creates READMEs for other applications."
+      
+    },
+    {
+      "title": "E-Commerce Backend",
+      "textbody": "This is a CLI app which acts as the backend to a future amazon like application."
+      
+    },
+    {
+      "title": "Budget Tracker",
+      "textbody": "This app debits and credits money from an account."
+     
+    }
+  ]
